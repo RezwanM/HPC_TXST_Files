@@ -1,0 +1,21 @@
+# create program in HiPE cluster
+(create directory)			| [a_b843@hipe2 ~]$						> mkdir HW_5
+(HiPe create cu file)		| [a_b843@hipe2 ~]$ 					> nano mm.cu
+(paste text to the file)	| SHIFT + RMB
+(Exit command)				| CTRL + x
+(Save file) 				| Y
+
+
+# Transfer HiPE Cluster generated Output.txt file to Leap Cluster
+
+(Computer to leap)(or putty)| Abdullahs-MacBook-Air:~ dinar$ 		> ssh a_b843@leap.txstate.edu 
+(Leap to HiPE)				| [a_b843@login1 ~]$ 					> ssh a_b843@hipe2.mitte.txstate.edu
+(HiPe to leap data upload)	| [a_b843@hipe2 ~]$ 					> scp hello.py a_b843@leap.txstate.edu:~/
+
+
+# NVCC command
+(Compile Program)			| nvcc -arch=sm_70 -o mm mm.cu
+(Run program)				| ./mm > mm.txt
+
+
+(GPU Status)				| nvidia-smi

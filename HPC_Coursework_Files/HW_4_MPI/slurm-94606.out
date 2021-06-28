@@ -1,0 +1,5 @@
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd: error: *** JOB 94606 ON compute-087 CANCELLED AT 2019-03-11T22:39:56 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 94606.0 ON compute-087 CANCELLED AT 2019-03-11T22:39:56 DUE TO TIME LIMIT ***
+srun: got SIGCONT
+srun: forcing job termination
